@@ -1,10 +1,11 @@
 {
-  "name": "aprilsite",
+  "name": "html-site",
   "version": "1.0.0",
-  "description": "This site serves as a simple introduction to HTML, CSS, and you can feel free to use it as a starting point for your simple HTML, CSS, and JS websites. Make the site your introduction, fill it with pictures, facts, a bio, etc.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:client": "webpack --config webpack.config.client.js --watch",
+    "dev:server": "webpack --config webpack.config.server.js --watch",
+    "dev:start": "nodemon dist/server.js --watch dist/server.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,19 @@
   },
   "homepage": "https://github.com/apriltrull/Simple-HTML-Site#readme",
   "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-latest": "^6.24.1",
+    "css-loader": "^0.28.7",
     "express": "^4.15.2",
-    "morgan": "^1.8.1"
-  }
+    "html-loader": "^0.5.1",
+    "html-webpack-plugin": "^2.30.1",
+    "json-server": "^0.12.0",
+    "morgan": "^1.8.1",
+    "webpack": "^3.6.0",
+    "webpack-combine-loaders": "^2.0.3",
+    "webpack-dev-server": "^2.9.1"
+  },
+  "devDependencies": {},
+  "description": "This site serves as a simple introduction to HTML, CSS, and you can feel free to use it as a starting point for your simple HTML, CSS, and JS websites. Make the site your introduction, fill it with pictures, facts, a bio, etc."
 }
